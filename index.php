@@ -30,9 +30,7 @@ switch ($requestUri) {
         $librosController = new LibrosController();
         $librosController->ListaLibors();
         break;
-    case '/crud-manoloMejor/usuarios':
-        require_once 'app/views/libros/listalibros.php';
-        break;
+   
     // case '/prestamos':
     //     $prestamoController = new PrestamoController();
     //     $prestamoController->index();
@@ -41,6 +39,12 @@ switch ($requestUri) {
     //     $loginController = new LoginController();
     //     $loginController->login();
     //     break;
+    case '/crud-manoloMejor/libros/form':
+       
+        break;
+    case '/crud-manoloMejor/usuarios':
+       
+        break;
     default:
         // Manejar rutas no encontradas
         http_response_code(404);

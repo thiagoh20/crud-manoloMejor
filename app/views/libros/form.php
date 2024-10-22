@@ -15,7 +15,7 @@
     <div class="container">
         <header class="bg-primary text-white p-3">
             <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -28,10 +28,10 @@
                                     <a class="nav-link" href="/crud-manoloMejor">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/libros/form">Añadir Libros</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/libros">Libros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Usuarios</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/usuarios">Usuarios</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/crud-manoloMejor/prestamos">Prestamos</a>
@@ -46,60 +46,62 @@
             </div>
         </header>
         <main class="container my-5">
-    <h2 class="mb-4 text-center">Registro de Libros</h2>
-    <form class="col-12 col-md-6 mx-auto p-4 border rounded shadow"method="POST" action="/crud-manoloMejor/libros/store">
-        <div class="mb-3">
-            <label for="titulo" class="form-label">Título del Libro</label>
-            <input type="text" class="form-control" name="titulo" id="titulo" required>
-        </div>
+            <h2 class="mb-4 text-center">Registro de Libros</h2>
+            <form class="col-12 col-md-6 mx-auto p-4 border rounded shadow" method="POST"
+                action="/crud-manoloMejor/libros/store">
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Título del Libro</label>
+                    <input type="text" class="form-control" name="titulo" id="titulo" required>
+                </div>
 
-        <div class="mb-3">
-            <label for="autor" class="form-label">Autor</label>
-            <input type="text" class="form-control" name="autor" id="autor" required>
-        </div>
+                <div class="mb-3">
+                    <label for="autor" class="form-label">Autor</label>
+                    <input type="text" class="form-control" name="autor" id="autor" required>
+                </div>
 
-        <div class="mb-3">
-            <label for="isbn" class="form-label">ISBN</label>
-            <input type="number" class="form-control" name="isbn" id="isbn" required>
-        </div>
+                <div class="mb-3">
+                    <label for="isbn" class="form-label">ISBN</label>
+                    <input type="number" class="form-control" name="isbn" id="isbn" required>
+                </div>
 
-        <div class="mb-3">
-            <label for="editorial" class="form-label">Editorial</label>
-            <input type="text" class="form-control" name="editorial" id="editorial" required>
-        </div>
+                <div class="mb-3">
+                    <label for="editorial" class="form-label">Editorial</label>
+                    <input type="text" class="form-control" name="editorial" id="editorial" required>
+                </div>
 
-        <div class="mb-3">
-            <label for="categoria" class="form-label">Categoría</label>
-            <select id="categoria" class="form-select" name="categoria" required>
-                <option value="ficcion" selected>Ficción</option>
-                <option value="no_ficcion">No Ficción</option>
-                <option value="ciencia_ficcion">Ciencia Ficción</option>
-                <option value="fantasia">Fantasía</option>
-                <option value="misterio">Misterio</option>
-                <option value="romance">Romance</option>
-                <option value="terror">Terror</option>
-                <option value="aventura">Aventura</option>
-                <option value="biografia">Biografía</option>
-                <option value="historia">Historia</option>
-                <option value="poesia">Poesía</option>
-                <option value="drama">Drama</option>
-                <option value="autoayuda">Autoayuda</option>
-                <option value="ensayo">Ensayo</option>
-                <option value="comedia">Comedia</option>
-            </select>
-        </div>
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría</label>
+                    <select id="categoria" class="form-select" name="categoria" required>
+                        <option value="ficcion" selected>Ficción</option>
+                        <option value="no_ficcion">No Ficción</option>
+                        <option value="ciencia_ficcion">Ciencia Ficción</option>
+                        <option value="fantasia">Fantasía</option>
+                        <option value="misterio">Misterio</option>
+                        <option value="romance">Romance</option>
+                        <option value="terror">Terror</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="biografia">Biografía</option>
+                        <option value="historia">Historia</option>
+                        <option value="poesia">Poesía</option>
+                        <option value="drama">Drama</option>
+                        <option value="autoayuda">Autoayuda</option>
+                        <option value="ensayo">Ensayo</option>
+                        <option value="comedia">Comedia</option>
+                    </select>
+                </div>
 
-        <div class="mb-3">
-            <label for="cantidad_disponible" class="form-label">Cantidad Disponible</label>
-            <input type="number" class="form-control" name="cantidad_disponible" id="cantidad_disponible" required>
-        </div>
+                <div class="mb-3">
+                    <label for="cantidad_disponible" class="form-label">Cantidad Disponible</label>
+                    <input type="number" class="form-control" name="cantidad_disponible" id="cantidad_disponible"
+                        required>
+                </div>
 
-        <div class="d-flex justify-content-between">
-            <button type="submit" class="btn btn-primary" name="btnregistrarLibro" value="ok">Registrar</button>
-            <a href="inicioBiblio.php" class="btn btn-secondary">Regresar</a>
-        </div>
-    </form>
-</main>
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary" name="btnregistrarLibro" value="ok">Registrar</button>
+                    <a href="inicioBiblio.php" class="btn btn-secondary">Regresar</a>
+                </div>
+            </form>
+        </main>
 
 
         <footer class="bg-light text-center py-4">

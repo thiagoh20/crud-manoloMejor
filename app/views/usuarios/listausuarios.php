@@ -12,8 +12,8 @@
 </head>
 
 <body>
-<div class="container">
-    <header class="bg-primary text-white p-3">
+    <div class="container">
+        <header class="bg-primary text-white p-3">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid">
@@ -28,13 +28,13 @@
                                     <a class="nav-link" href="/crud-manoloMejor">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/libros/form">Añadir libro</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/usuarios">usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Usuario</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/usuarios/form">Añadir Usuario</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="crud-manoloMejor/libros/detalle">Prestamos</a>
+                                    <a class="nav-link" href="crud-manoloMejor/usuarios/detalle">Prestamos</a>
                                 </li>
                             </ul>
                         </div>
@@ -43,53 +43,47 @@
             </div>
         </header>
         <main class="container my-5">
-            <h2 class="mb-4 text-center">Registro de Usuarios</h2>
-            
-            <!-- Formulario de Registro de Usuarios -->
-            <div class="container-fluid row">
-                <form class="col-4 p-3" method="POST" action="/crud-manoloMejor/usuarios/registrar">
-                    <h3 class="text-center text-secondary">Registro de Usuarios</h3>
-
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre del usuario</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="apellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" name="apellido" id="apellido" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="tipo_doc" class="form-label">Tipo de documento</label>
-                        <select id="tipo_doc" class="form-select" name="tipo_doc" required>
-                            <option value="TI">Tarjeta de Identidad</option>
-                            <option value="CC">Cédula de Ciudadanía</option>
-                            <option value="CE">Cédula de Extranjería</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="documento" class="form-label">Documento</label>
-                        <input type="number" class="form-control" name="documento" id="documento" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" name="correo" id="correo" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" name="btnregistrar">Registrar</button>
-                    <a href="/crud-manoloMejor/inicio" class="btn btn-secondary">Regresar</a>
-                </form>
-
-                <!-- Tabla de Usuarios -->
-                <div class="col-8 p-4">
-                    <h3 class="text-center text-secondary">Lista de Usuarios</h3>
-                   
-                    </table>
-                </div>
-            </div>
+            <h2 class="mb-4">Lista de usuarios</h2>
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">apellido</th>
+                        <th scope="col">tipo_doc</th>
+                        <th scope="col">documento</th>
+                        <th scope="col">correo</th>
+                       
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($usuarios as $usuario): ?>
+                        <tr>
+                            <th scope="row"><?php echo htmlspecialchars($usuario->ID); ?></th>
+                            <td><?php echo htmlspecialchars($usuario->Nombres); ?></td>
+                            <td><?php echo htmlspecialchars($usuario->Apellidos); ?></td>
+                            <td><?php echo htmlspecialchars($usuario->tipo_doc); ?></td>
+                            <td><?php echo htmlspecialchars($usuario->documento); ?></td>
+                            <td><?php echo htmlspecialchars($usuario->correo); ?></td>
+                            <td>
+                                <a href="usuarios/detalle?id=<?php echo $usuario->ID; ?>" class="btn btn-small btn-warning">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </a>
+                                <a href="usuarios/eliminar?id=<?php echo $usuario->ID; ?>" class="btn btn-small btn-danger">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </a>
+                            </td>
+                            <!-- <td>
+                                <a href="/usuarios/detalle?id=<?php echo $usuario->id; ?>" class="btn btn-info btn-sm">Ver
+                                    Detalle</a>
+                                <a href="/usuarios/form?id=<?php echo $usuario->id; ?>"
+                                    class="btn btn-warning btn-sm">Editar</a>
+                            </td> 
+                        </tr> -->
+                        <?php endforeach; ?>
+                </tbody>
+            </table>
         </main>
 
 

@@ -31,7 +31,7 @@
                                     <a class="nav-link" href="/crud-manoloMejor/libros/form">Añadir libro</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Usuario</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/usuarios">Usuario</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="crud-manoloMejor/libros/detalle">Prestamos</a>

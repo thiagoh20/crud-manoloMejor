@@ -15,7 +15,12 @@ $routes = [
     'crud-manoloMejor/libros/detalle' => 'LibrosController@detalle',
     'crud-manoloMejor/libros/actualizar' => 'LibrosController@actualizar',
 
-    'crud-manoloMejor/usuarios' => 'UsuariosController@Usuarios',
+    'crud-manoloMejor/usuarios' => 'UsuariosController@Listausuarios',
+    'crud-manoloMejor/usuarios/form' => 'UsuariosController@form',
+    'crud-manoloMejor/usuarios/store' => 'UsuariosController@store',
+    'crud-manoloMejor/usuarios/eliminar' => 'UsuariosController@delete',
+    'crud-manoloMejor/usuarios/detalle' => 'UsuariosController@detalle',
+    'crud-manoloMejor/usuarios/actualizar' => 'UsuariosController@actualizar',
     // 'prestamos' => 'PrestamoController@index', 
     // 'prestamos/detalle' => 'PrestamoController@detalle', 
     // 'usuarios/login' => 'LoginController@login',
