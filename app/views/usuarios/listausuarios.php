@@ -28,13 +28,13 @@
                                     <a class="nav-link" href="/crud-manoloMejor">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/usuarios">usuarios</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/libros">Libros</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/crud-manoloMejor/usuarios/form">Añadir Usuario</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="crud-manoloMejor/usuarios/detalle">Prestamos</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Préstamos</a>
                                 </li>
                             </ul>
                         </div>

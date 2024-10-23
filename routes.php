@@ -2,8 +2,8 @@
 
 require_once 'app/controllers/LibrosController.php';
 require_once 'app/controllers/UsuariosController.php';
-// require_once 'app/controllers/PrestamoController.php';
-
+require_once 'app/controllers/PrestamosController.php';
+require_once 'app/controllers/LoginController.php';
 // require_once 'app/controllers/LoginController.php';
 // Definir las rutas y sus correspondientes controladores
 $routes = [
@@ -21,9 +21,18 @@ $routes = [
     'crud-manoloMejor/usuarios/eliminar' => 'UsuariosController@delete',
     'crud-manoloMejor/usuarios/detalle' => 'UsuariosController@detalle',
     'crud-manoloMejor/usuarios/actualizar' => 'UsuariosController@actualizar',
-    // 'prestamos' => 'PrestamoController@index', 
-    // 'prestamos/detalle' => 'PrestamoController@detalle', 
-    // 'usuarios/login' => 'LoginController@login',
+
+
+    'crud-manoloMejor/prestamos' => 'PrestamosController@Listaprestamos',
+    'crud-manoloMejor/prestamos/form' => 'PrestamosController@form',
+    'crud-manoloMejor/prestamos/store' => 'PrestamosController@store',
+    'crud-manoloMejor/prestamos/eliminar' => 'PrestamosController@delete',
+    'crud-manoloMejor/prestamos/detalle' => 'PrestamosController@detalle',
+    'crud-manoloMejor/prestamos/actualizar' => 'PrestamosController@actualizar',
+
+    'crud-manoloMejor/login/inicio' => 'LoginController@login',
+    'crud-manoloMejor/login/registro' => 'LoginController@registro',
+    'crud-manoloMejor/login/registrar' => 'LoginController@registrar',
     // 'usuarios/registro' => 'UsuarioController@registro', 
 ];
 

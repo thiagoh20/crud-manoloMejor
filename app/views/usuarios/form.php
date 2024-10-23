@@ -34,7 +34,7 @@
                                     <a class="nav-link" href="/crud-manoloMejor/usuarios">Usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="crud-manoloMejor/libros/detalle">Prestamos</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Préstamos</a>
                                 </li>
                             </ul>
                         </div>
@@ -75,9 +75,11 @@
                         <label for="correo" class="form-label">Correo</label>
                         <input type="email" class="form-control" name="correo" id="correo" required>
                     </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary" name="btnregistrar">Registrar</button>
+                        <a href="/crud-manoloMejor/usuarios" class="btn btn-secondary">Regresar</a>
+                    </div>
 
-                    <button type="submit" class="btn btn-primary" name="btnregistrar">Registrar</button>
-                    <a href="/crud-manoloMejor/inicio" class="btn btn-secondary">Regresar</a>
                 </form>
 
             </div>

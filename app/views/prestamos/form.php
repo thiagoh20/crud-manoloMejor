@@ -8,7 +8,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/488b60e22f.js" crossorigin="anonymous"></script>
     <!-- Asegúrate de que la ruta sea correcta -->
-    <title>Lista de Libros</title>
+    <title>Biblioteca</title>
 </head>
 
 <body>
@@ -28,13 +28,13 @@
                                     <a class="nav-link" href="/crud-manoloMejor">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/libros">Libros</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/libros">libros</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/crud-manoloMejor/usuarios">Usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Préstamos</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">préstamos</a>
                                 </li>
                             </ul>
                         </div>
@@ -43,49 +43,48 @@
             </div>
         </header>
         <main class="container my-5">
-            <h2 class="mb-4 text-center">Actualizar Usuario</h2>
+            <h2 class="mb-4 text-center">Registro de préstamos</h2>
             <div class="container-fluid row">
                 <form class="col-12 col-md-6 mx-auto p-4 border rounded shadow" method="POST"
-                    action="actualizar?id=<?php echo $usuario->ID; ?>">
+                    action="/crud-manoloMejor/prestamos/store">
                     <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre del usuario</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre"
-                            value="<?php echo isset($usuario->Nombres) ? htmlspecialchars($usuario->Nombres) : ''; ?>"
-                            required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="apellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" name="apellido" id="apellido"
-                            value="<?php echo isset($usuario->Apellidos) ? htmlspecialchars($usuario->Apellidos) : ''; ?>"
-                            required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="tipo_doc" class="form-label">Tipo de documento</label>
-                        <select id="tipo_doc" class="form-select" name="tipo_doc" value="<?= $usuario->Apellidos; ?>">
-                            <option value="TI" <?php echo isset($usuario->tipo_doc) && $usuario->tipo_doc == 'TI' ? 'selected' : ''; ?>>Tarjeta de Identidad</option>
-                            <option value="CC" <?php echo isset($usuario->tipo_doc) && $usuario->tipo_doc == 'CC' ? 'selected' : ''; ?>>Cédula de Ciudadanía</option>
-                            <option value="CE" <?php echo isset($usuario->tipo_doc) && $usuario->tipo_doc == 'CE' ? 'selected' : ''; ?>>Cédula de Extranjería</option>
+                        <label for="exampleInputEmail1" class="form-label">Id usuario</label>
+                        <select readonly id="id_usuario" class="form-select" name="id_usuario" required>
+                            <?php foreach ($usuarios as $usuario): ?>
+                                <option value="<?php echo htmlspecialchars($usuario->ID); ?>">
+                                    <?php echo htmlspecialchars($usuario->Nombres); ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
-
                     <div class="mb-3">
-                        <label for="documento" class="form-label">Documento</label>
-                        <input type="number" class="form-control" name="documento" id="documento"
-                            value="<?php echo isset($usuario->documento) ? htmlspecialchars($usuario->documento) : ''; ?>"
-                            required>
+                        <label for="exampleInputEmail1" class="form-label">Id libro</label>
+                        <select readonly id="id_libro" class="form-select" name="id_libro" required>
+                            <?php foreach ($libros as $libro): ?>
+                                <option value="<?php echo htmlspecialchars($libro->ID); ?>">
+                                    <?php echo htmlspecialchars($libro->Titulo); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Fecha de prestamo</label>
+                        <input type="date" class="form-select" name="fecha_prestamo" required>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Fecha de devolucion</label>
+                        <input type="date" class="form-select" name="fecha_devolucion" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="correo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" name="correo" id="correo"
-                            value="<?php echo isset($usuario->correo) ? htmlspecialchars($usuario->correo) : ''; ?>"
-                            required>
+                        <label for="exampleInputEmail1" class="form-label">Estado</label>
+                        <select id="estado" class="form-select" name="estado" required>
+                            <option value="Devuelto">Devuelto</option>
+                            <option value="Prestado">Prestado</option>
+                        </select>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <button type="submit" class="btn btn-primary" name="btnregistrar">Actualizar</button>
-                        <a href="/crud-manoloMejor/usuarios" class="btn btn-secondary">Regresar</a>
+                        <button type="submit" class="btn btn-primary" name="btnregistrar">Registrar</button>
+                        <a href="/crud-manoloMejor/prestamos" class="btn btn-secondary">Regresar</a>
                     </div>
                 </form>
 

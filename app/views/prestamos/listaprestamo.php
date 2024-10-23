@@ -15,7 +15,6 @@
     <div class="container">
         <header class="bg-primary text-white p-3">
             <div class="container">
-                <h1 class="text-center">Biblioteca Virtual</h1>
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -35,13 +34,7 @@
                                     <a class="nav-link" href="/crud-manoloMejor/usuarios">Usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Préstamos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/usuarios/login">Iniciar Sesión</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/login/registro">Registro</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/prestamos/form">Añadir préstamos</a>
                                 </li>
                             </ul>
                         </div>
@@ -49,54 +42,49 @@
                 </nav>
             </div>
         </header>
-        <!-- <main class="container my-5">
-            <h2 class="mb-4">Lista de Libros</h2>
+        <main class="container my-5">
+            <h2 class="mb-4">Lista de préstamos</h2>
             <table class="table table-striped table-bordered">
                 <thead class="table-dark">
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Título</th>
-                        <th scope="col">Autor</th>
-                        <th scope="col">ISBN</th>
-                        <th scope="col">Editorial</th>
-                        <th scope="col">Género</th>
-                        <th scope="col">Cantidad Disponible</th>
-                        <th scope="col"></th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Id Usuario</th>
+                        <th scope="col">Id Libro</th>
+                        <th scope="col">Fecha Préstamo</th>
+                        <th scope="col">Fecha Devolución</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th> <!-- Columna para acciones como editar o eliminar -->
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($libros as $libro): ?>
+                    <?php foreach ($prestamos as $prestamo): ?>
                         <tr>
-                            <th scope="row"><?php echo htmlspecialchars($libro->ID); ?></th>
-                            <td><?php echo htmlspecialchars($libro->Titulo); ?></td>
-                            <td><?php echo htmlspecialchars($libro->Autor); ?></td>
-                            <td><?php echo htmlspecialchars($libro->ISBN); ?></td>
-                            <td><?php echo htmlspecialchars($libro->Editorial); ?></td>
-                            <td><?php echo htmlspecialchars($libro->Categoria); ?></td>
-                            <td><?php echo htmlspecialchars($libro->cantidad_disponible); ?></td>
+                            <th scope="row"><?php echo htmlspecialchars($prestamo->ID); ?></th>
+                            <td><?php echo htmlspecialchars($prestamo->ID_usuario); ?></td>
+                            <td><?php echo htmlspecialchars($prestamo->ID_libro); ?></td>
+                            <td><?php echo htmlspecialchars($prestamo->Fecha_prestamo); ?></td>
+                            <td><?php echo htmlspecialchars($prestamo->Fecha_devolucion); ?></td>
+                            <td><?php echo htmlspecialchars($prestamo->Estado); ?></td>
                             <td>
-                                <a href="/libros/detalle?id=<?php echo $libro->id; ?>" class="btn btn-small btn-warning">
-                                    <i class="fa-regular fa-pen-to-square"></i>
+                                <a href="prestamos/detalle?id=<?php echo $prestamo->ID; ?>"
+                                    class="btn btn-small btn-warning">
+                                    <i class="fa-regular fa-pen-to-square"></i> <!-- Icono de editar -->
                                 </a>
-                                <a href="/libros/form?id=<?php echo $libro->id; ?>" class="btn btn-small btn-danger">
-                                    <i class="fa-regular fa-trash-can"></i>
+                                <a href="prestamos/eliminar?id=<?php echo $prestamo->ID; ?>"
+                                    class="btn btn-small btn-danger">
+                                    <i class="fa-regular fa-trash-can"></i> <!-- Icono de eliminar -->
                                 </a>
                             </td>
-                            <td>
-                                <a href="/libros/detalle?id=<?php echo $libro->id; ?>" class="btn btn-info btn-sm">Ver
-                                    Detalle</a>
-                                <a href="/libros/form?id=<?php echo $libro->id; ?>"
-                                    class="btn btn-warning btn-sm">Editar</a>
-                            </td> 
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </main>
 
+
         <footer class="bg-light text-center py-4">
             <p>&copy; <?php echo date("Y"); ?> Tu Marca. Todos los derechos reservados.</p>
-        </footer> -->
+        </footer>
 
     </div>
 </body>

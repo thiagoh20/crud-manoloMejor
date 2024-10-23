@@ -61,12 +61,12 @@ class Usuario
     public function actualizarUsuario($id, $nombre, $apellido, $tipo_doc, $documento, $correo)
     {
         $sql = "UPDATE usuarios SET 
-                    Nombres = :nombre, 
-                    Apellidos = :apellido, 
-                    tipo_doc = :tipo_doc, 
-                    documento = :documento, 
-                    correo = :correo, 
-                WHERE ID = :id";
+                Nombres = :nombre, 
+                Apellidos = :apellido, 
+                tipo_doc = :tipo_doc, 
+                documento = :documento, 
+                correo = :correo 
+            WHERE ID = :id";  // Eliminada la coma aquí
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':nombre', $nombre);
         $stmt->bindParam(':apellido', $apellido);

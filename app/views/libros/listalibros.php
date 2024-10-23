@@ -34,7 +34,7 @@
                                     <a class="nav-link" href="/crud-manoloMejor/usuarios">Usuario</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="crud-manoloMejor/libros/detalle">Prestamos</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Préstamos</a>
                                 </li>
                             </ul>
                         </div>

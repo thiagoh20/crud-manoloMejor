@@ -32,7 +32,7 @@
                                     <?php echo htmlspecialchars($libro->cantidad_disponible); ?>
                                 </p>
                                 <div class="d-flex justify-content-between">
-                                    <a href="/libros/detalle?id=<?php echo $libro->id; ?>" class="btn btn-info btn-sm">Ver
+                                    <a href="/crud-manoloMejor/libros/detalle?id=<?php echo $libro->ID; ?>" class="btn btn-info btn-sm">Ver
                                         Detalle</a>
 
                                 </div>

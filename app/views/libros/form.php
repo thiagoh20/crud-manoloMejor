@@ -34,7 +34,7 @@
                                     <a class="nav-link" href="/crud-manoloMejor/usuarios">Usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Prestamos</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/prestamos">Préstamos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/crud-manoloMejor/usuarios/login">Detalles del libro</a>
@@ -98,7 +98,7 @@
 
                 <div class="d-flex justify-content-between">
                     <button type="submit" class="btn btn-primary" name="btnregistrarLibro" value="ok">Registrar</button>
-                    <a href="inicioBiblio.php" class="btn btn-secondary">Regresar</a>
+                    <a href="/crud-manoloMejor/libros" class="btn btn-secondary">Regresar</a>
                 </div>
             </form>
         </main>
