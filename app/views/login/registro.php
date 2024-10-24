@@ -13,7 +13,7 @@
     <div class="container">
         <header class="bg-primary text-white p-3">
             <div class="container">
-            <h1 class="text-center">Biblioteca Virtual</h1>
+                <h1 class="text-center">Biblioteca Virtual</h1>
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -22,17 +22,20 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
-                           
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/crud-manoloMejor">Inicio</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </nav>
             </div>
         </header>
         <main class="container my-5">
-            <h2 class="text-center">Registro login</h2>
-            <form class="col-12 col-md-6 mx-auto p-4 border rounded shadow" 
-            action="/crud-manoloMejor/login/registrar" method="POST"
-                class="mt-4">
+            <h2 class="text-center">Registro Usuario</h2>
+            <form class="col-12 col-md-6 mx-auto p-4 border rounded shadow" action="/crud-manoloMejor/login/registrar"
+                method="POST" class="mt-4">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre Completo</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -52,7 +55,7 @@
                 <button type="submit" class="btn btn-primary">Registrarse</button>
             </form>
             <div class="text-center mt-3">
-                <p>¿Ya tienes una cuenta? <a href="/usuarios/login">Inicia sesión aquí</a></p>
+                <p>¿Ya tienes una cuenta? <a href="/crud-manoloMejor/login/inicio">Inicia sesión aquí</a></p>
             </div>
         </main>
 

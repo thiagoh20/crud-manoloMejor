@@ -1,23 +1,14 @@
 <?php
-// Incluir la configuración de la base de datos
-require_once 'config/database.php';
-require_once 'app/models/Libro.php';
-// Incluir archivos de rutas
+
+ob_start();
+session_start();
 require_once 'routes.php';
 
-// Incluir el controlador frontal
+
+
+require_once 'config/database.php';
+require_once 'app/models/Libro.php';
 require_once 'app/controllers/LibrosController.php';
-// require_once 'app/controllers/PrestamoController.php';
-// require_once 'app/controllers/UsuarioController.php';
-// require_once 'app/controllers/LoginController.php';
-
-// Inicializar la sesión
-//session_start();
-
-// Aquí podrías agregar lógica para manejar la solicitud
-// y dirigirla al controlador adecuado según la ruta solicitada
-
-// Ejemplo simple de enrutamiento
 $requestUri = rtrim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 switch ($requestUri) {
     case '/crud-manoloMejor':
@@ -54,6 +45,7 @@ switch ($requestUri) {
 
 
         break;
+    case '/crud-manoloMejor/login/inicio':
     case '/crud-manoloMejor/login/registro':
         break;
     default:

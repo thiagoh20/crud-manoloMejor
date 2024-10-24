@@ -33,7 +33,10 @@ $routes = [
     'crud-manoloMejor/login/inicio' => 'LoginController@login',
     'crud-manoloMejor/login/registro' => 'LoginController@registro',
     'crud-manoloMejor/login/registrar' => 'LoginController@registrar',
-    // 'usuarios/registro' => 'UsuarioController@registro', 
+
+    'crud-manoloMejor/login/autenticar' => 'LoginController@autenticar',
+    'crud-manoloMejor/login/logout' => 'LoginController@logout',
+
 ];
 
 // Procesar la solicitud y dirigir a la función correcta

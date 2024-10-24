@@ -38,10 +38,13 @@
                                     <a class="nav-link" href="/crud-manoloMejor/prestamos">Préstamos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/crud-manoloMejor/usuarios/login">Iniciar Sesión</a>
+                                    <a class="nav-link" href="/crud-manoloMejor/login/inicio">Iniciar Sesión</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/crud-manoloMejor/login/registro">Registro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/crud-manoloMejor/login/logout">Cerrar sesión</a>
                                 </li>
                             </ul>
                         </div>

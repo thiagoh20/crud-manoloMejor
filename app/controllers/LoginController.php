@@ -12,7 +12,7 @@ class LoginController
     // Muestra el formulario de login
     public function login()
     {
-        require_once 'app/views/usuarios/login.php';
+        require_once 'app/views/login/formLogin.php';
     }
 
     // Procesa el registro de un nuevo usuario
@@ -31,7 +31,7 @@ class LoginController
 
             $usuario = new Login();
             if ($usuario->registrar($nombre, $email, password_hash($password, PASSWORD_BCRYPT))) {
-                header('Location: /usuarios/login');
+                header('Location: /crud-manoloMejor/login/inicio');
                 exit();
             } else {
                 echo "Error al registrar el usuario.";
@@ -56,7 +56,7 @@ class LoginController
                 session_start();
                 $_SESSION['usuario_id'] = $user->id;
                 $_SESSION['nombre'] = $user->nombre;
-                header('Location: /');
+                header('Location: /crud-manoloMejor');
                 exit();
             } else {
                 echo "Correo o contraseña incorrectos.";
@@ -69,6 +69,8 @@ class LoginController
     {
         session_start();
         session_destroy();
-        header('Location: /usuarios/login');
+        header('Location: /crud-manoloMejor/login/inicio');
+        exit();
+       // require_once 'app/views/login/formLogin.php';
     }
 }

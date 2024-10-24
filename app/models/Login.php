@@ -24,7 +24,7 @@ class Login
 
     // Busca un usuario por su correo electrónico
     public function buscarPorEmail($email) {
-        $sql = "SELECT * FROM usuarios WHERE email = :email";
+        $sql = "SELECT * FROM login WHERE email = :email";
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(':email', $email);
         $stmt->execute();
