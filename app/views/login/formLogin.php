@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="container mt-5">
         
         <h2 class="text-center my-5">Iniciar Sesión</h2>
-        <form class="col-12 col-md-4 mx-auto p-4 border rounded shadow my-5"  action="formLogin.php" method="POST" class="mt-4">
+        <form class="col-12 col-md-4 mx-auto p-4 border rounded shadow my-5"  action="/crud-manoloMejor/login/autenticar" method="POST" class="mt-4">
             <div class="mb-3">
                 <label for="email" class="form-label">Correo Electrónico</label>
                 <input type="email" class="form-control" id="email" name="email" required>
